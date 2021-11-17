@@ -1,0 +1,17 @@
+﻿@model ventasAPW.Models.Categoria
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Editar</h2>
+<br />
+
+<form method="post">
+        <div class="form-group row">
+            <input type="hidden" name="id_categoria" value="@Model.id_categoria" />
+            <label class="control-label">Nombre</label>
+            <input type="text" name="nombre" class="form-control" value="@Model.nombre" />
+        </div>
+        <a href="@Url.Action("Index","Categoria")" class="btn btn-default">Volver</a>
+        <button class="btn btn-primary">Guardar</button>
+</form>

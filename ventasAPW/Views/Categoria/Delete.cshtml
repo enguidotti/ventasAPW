@@ -1,0 +1,18 @@
+﻿@model ventasAPW.Models.Categoria
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar Categoría</h2>
+
+<h3>¿Desea eliminar la categoría?</h3>
+
+<form method="post">
+    <div class="form-group row">
+        <input type="hidden" name="id_categoria" value="@Model.id_categoria" />
+        <label class="control-label">Nombre</label>
+        <input type="text" name="nombre" class="form-control" value="@Model.nombre" readonly />
+    </div>
+    <a href="@Url.Action("Index","Categoria")" class="btn btn-default">Volver</a>
+    <button class="btn btn-danger">Eliminar</button>
+</form>

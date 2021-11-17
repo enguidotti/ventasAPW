@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ventasAPW.Models.Categoria>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de categorías</h2>
+
+<div class="col-12">
+    <table class="table table-condensed table-bordered">
+        <thead class="bg-primary">
+            <tr>
+                <th>Id</th>
+                <th>Categoría</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.id_categoria</td>
+                    <td>@item.nombre</td>
+                    <td>
+                        <a href="@Url.Action("Edit","Categoria",new { id = item.id_categoria })">Editar</a> | 
+                        <a href="@Url.Action("Delete","Categoria",new { id = item.id_categoria })">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
